@@ -30,8 +30,8 @@ Configuration exec.json file
 
 ```json
 {
-    "port": "{APP_PORT}",
-    "auth_user": {APP_AUTH_USER},
+    "port": {APP_PORT},
+    "auth_user": "{APP_AUTH_USER}",
     "auth_pass": "{APP_AUTH_PASS}"
 }
 ```
