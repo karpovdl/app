@@ -19,7 +19,7 @@ To build an application for windows make script/build.cmd
 ## app
 
 Application app - application for running processes
-app -h - help command
+* app -h - help command
 
 ### app exec
 
