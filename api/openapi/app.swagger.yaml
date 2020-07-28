@@ -1,0 +1,28 @@
+swagger: "2.0"
+info:
+  description: "This is an example of running an application."
+  version: "1.0.0"
+  title: "App exec"
+  contact:
+    email: "karpovdl@hotmail.com"
+  license:
+    name: "MIT License"
+    url: "http://www.apache.org/licenses/LICENSE-2.0.html"
+schemes:
+- "http"
+paths:
+  /app/start:
+    get:
+      tags:
+      - "start"
+      summary: "Run application"
+      description: ""
+      operationId: ""
+      produces:
+      - "application/json"
+      responses:
+        "200":
+          description: "successful operation"
+externalDocs:
+  description: "Source"
+  url: "http://github.com/karpovdl/app"
