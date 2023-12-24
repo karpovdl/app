@@ -23,7 +23,7 @@ func main() {
 func initApp() bool {
 	app := cli.App{
 		Name:     "app",
-		Version:  "v1.0.0.0",
+		Version:  "v1.0.0.1",
 		Compiled: time.Now(),
 		Authors: []*cli.Author{
 			{

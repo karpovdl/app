@@ -12,20 +12,25 @@ IF EXIST go.mod DEL go.mod /Q /S
 IF EXIST go.sum DEL go.sum /Q /S
 
 :: Set env variable
-set GOROOT=c:\go
+set GOROOT=C:\Program Files\Go
 set GOOS=windows
+
+go mod init github.com/karpovdl/app
+
+go get github.com/gorilla/handlers
+go get github.com/gorilla/mux
+go get github.com/spf13/afero
+go get github.com/urfave/cli/v2
 
 :: Code format
 go fmt
 
-go mod init github.com/karpovdl/app
-
 :: Code build x64
 set GOARCH=amd64
-go build -ldflags "-s -w" -i -v -o bin/release/64/app.exe
-go build -race -i -v -o bin/debug/64/app.exe
+go build -ldflags "-s -w" -v -o bin/release/64/app.exe
+go build -race -v -o bin/debug/64/app.exe
 
 :: Code build x86
 set GOARCH=386
-go build -ldflags "-s -w" -i -v -o bin/release/32/app.exe
-go build -i -v -o bin/debug/32/app.exe
+go build -ldflags "-s -w" -v -o bin/release/32/app.exe
+go build -v -o bin/debug/32/app.exe
